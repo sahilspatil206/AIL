@@ -1,0 +1,129 @@
+2. What is A* Search Algorithm?
+A* is an informed search algorithm used to find the shortest path from an initial state to a goal state.
+
+It uses two values:
+\[
+f(n)=g(n)+h(n)
+\]
+
+- g(n): Actual cost from the starting state to current state.
+- h(n): Estimated cost from current state to goal.
+- f(n): Total estimated cost.
+A* selects the state having the lowest f(n).
+3. What is a Heuristic Function?
+A heuristic is an estimation function that helps the algorithm decide which path is more promising.
+
+It reduces unnecessary searching by guiding the algorithm towards the goal.
+4. What is Manhattan Distance?
+Your program uses Manhattan Distance as its heuristic function.
+
+It calculates the total horizontal and vertical distance of every tile from its correct position.
+\[
+h(n)=\sum (|x_1-x_2|+|y_1-y_2|)
+\]
+
+The blank tile (0) is ignored.
+5. What is a Priority Queue?
+A priority queue is a data structure in which elements are processed according to their priority.
+
+In your program:
+- The priority is the f(n) value.
+- The state with the lowest f(n) is selected first.
+6. What is Path Reconstruction?
+The program uses a parent map to store the previous state of every visited state.
+
+Once the goal is reached, it follows the parent states backwards to display the complete solution path.
+
+2. What is Minimax Algorithm?
+Minimax is a decision-making algorithm used in Artificial Intelligence for two-player games.
+
+It chooses the best possible move by assuming that both players play optimally.
+
+It has two types of players:
+- MAX: Tries to maximize the score (computer).
+- MIN: Tries to minimize the score (human).
+In your program:
+- Computer plays O and is MAX.
+- Human plays X and is MIN.
+3. How Minimax Works
+1. Generate all possible moves.
+2. Check whether the game is won, lost, or drawn.
+3. Assign a score to each terminal state.
+4. MAX selects the highest score.
+5. MIN selects the lowest score.
+6. The computer chooses the move with the best score.
+4. What is Alpha-Beta Pruning?
+Alpha-Beta Pruning is an optimization technique used with Minimax.
+
+It avoids exploring branches that cannot influence the final decision.
+
+It improves performance without changing the final result.
+
+Two important variables:
+- Alpha (α): Best value MAX can guarantee.
+- Beta (β): Best value MIN can guarantee.
+Pruning condition:
+\[
+\beta \leq \alpha
+\]
+
+When this condition is satisfied, further exploration of that branch is unnecessary.
+5. Winning and Losing Scores
+Your program uses:
+Result	Score
+Computer wins (O)	+10
+Human wins (X)	-10
+Draw	0
+
+6. What is Backtracking in Minimax?
+The algorithm temporarily places X or O in an empty cell, evaluates the result recursively, and restores the original cell.
+
+This allows it to test different possible moves.
+7. Complexity
+Algorithm	Time Complexity
+Minimax	\(O(b^d)\)
+Minimax with Alpha-Beta	Best case \(O(b^{d/2})\)
+
+Here, b is the branching factor and d is the search depth.
+----------------------------------------------------------------------
+Q69. What is Overfitting?
+
+When a model learns training data too well, including noise, and performs poorly on unseen data.
+
+Q70. What is Underfitting?
+
+When a model is too simple to learn the underlying patterns in the data.
+
+Q71. What is a Decision Tree?
+
+A tree-based model that makes decisions using conditions on input features.
+Q66. What is Clustering?
+
+Grouping similar data points based on their characteristics.
+
+Q67. What is K-Means Clustering?
+
+An unsupervised learning algorithm that divides data into K clusters based on their distances from cluster centroids.
+
+Q61. What is Machine Learning?
+
+A branch of AI that enables systems to learn patterns from data and improve performance without explicitly programming every rule.
+
+Q62. What are the three main types of Machine Learning?
+1. Supervised Learning
+2. Unsupervised Learning
+3. Reinforcement Learning
+Q63. What is Supervised Learning?
+
+Learning using labeled training data.
+
+Examples:
+- Classification
+- Regression
+Q64. What is Unsupervised Learning?
+
+Learning patterns from unlabeled data.
+
+Examples:
+- Clustering
+- Association Rule Mining
